@@ -1,5 +1,5 @@
 name: 🐛 Bug
-description: File a bug report
+description: Report a reproducible bug or regression.
 title: "Brief description of the bug"
 labels: [bug]
 body:

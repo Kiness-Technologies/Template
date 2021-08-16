@@ -2,6 +2,7 @@ name: 🧩 Feature
 description: Create an issue based on a feature/topic
 title: "Brief description of the feature"
 labels: [feature]
+projects: [Development]
 body:
   - type: input
     id: contact

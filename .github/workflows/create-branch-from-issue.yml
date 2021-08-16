@@ -18,11 +18,13 @@ jobs:
       - name: Create feature branch
         if: ${{ contains(github.event.issue.labels.*.name, 'feature') }}
         run: |
+          git fetch
           git checkout develop
           git checkout -b feature/${{ github.event.issue.number }}
           
       - name: Create hotfix branch
         if: ${{ contains(github.event.issue.labels.*.name, 'hotfix') }}
         run: |
+          git fetch
           git checkout main
           git checkout -b hotfix/${{ github.event.issue.number }}

@@ -22,3 +22,6 @@ jobs:
 
       - name: Log the issue number id
         run: echo ${{ github.event.issue.number }}
+        
+      - name: Create feature branch
+        run: git flow feature start feature_branch

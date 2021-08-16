@@ -17,7 +17,7 @@ body:
   - type: input
     attributes:
       label: What browser are you using?
-      description: ['Chrome', 'Safari']
+      options: ['Chrome', 'Safari']
     validations:
       required: true
   - type: input

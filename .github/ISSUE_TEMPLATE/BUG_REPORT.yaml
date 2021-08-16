@@ -17,13 +17,18 @@ body:
   - type: input
     attributes:
       label: What browser are you using?
-      options: ['Chrome', 'Safari']
+      options: 
+        - Chrome
+        - Safari
     validations:
       required: true
   - type: input
     attributes:
       label: What operating system are you using?
-      options: ['macOS', 'Linux', 'Windows']
+      options:
+        - 'macOS'
+        - 'Linux'
+        - 'Windows'
     validations:
       required: true
   - type: textarea

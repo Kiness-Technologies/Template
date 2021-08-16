@@ -9,9 +9,10 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called "run"
   run:
-    # The type of runner that the job will run on
+    if: ${{ contains(github.event.issue.labels.*.name, 'feature') }}
+
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -19,6 +20,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world! ${{ github.event.labels[0].name }}
+      - name: Log the issue number id
+        run: echo ${{ github.event.issue.number }}

@@ -21,7 +21,7 @@ jobs:
           git fetch
           git checkout develop
           git checkout -b feature/${{ github.event.issue.number }}
-          git push
+          git push --set-upstream origin feature/${{ github.event.issue.number }}
           
       - name: Create hotfix branch
         if: ${{ contains(github.event.issue.labels.*.name, 'hotfix') }}
@@ -29,4 +29,4 @@ jobs:
           git fetch
           git checkout main
           git checkout -b hotfix/${{ github.event.issue.number }}
-          git push
+          git push --set-upstream origin hotfix/${{ github.event.issue.number }}

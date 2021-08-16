@@ -14,15 +14,15 @@ body:
       description: 'For example: 12.0.0'
     validations:
       required: true
-  - type: input
+  - type: dropdown
     attributes:
       label: What browser are you using?
-      options: 
+      options:
         - Chrome
         - Safari
     validations:
       required: true
-  - type: input
+  - type: dropdown
     attributes:
       label: What operating system are you using?
       options:

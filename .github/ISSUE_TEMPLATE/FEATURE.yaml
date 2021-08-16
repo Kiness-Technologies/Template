@@ -1,4 +1,4 @@
-name: 🧩 Feature
+name: Feature
 description: Create an issue based on a feature/topic
 labels: [feature]
 body:
